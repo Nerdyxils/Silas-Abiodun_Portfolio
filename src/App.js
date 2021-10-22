@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch } from 'react-router';
+import { BrowserRouter as BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import FooterMenu from './Components/footer-icons/Footer-Menu';
 import Menu from './Components/menu-item/Menu';
@@ -13,15 +13,18 @@ function App() {
   return (
     <div className="main">
       <div className="body">
-      <Menu />
-      <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/About' component={About} />
-          <Route path='/Services' component={services} />
-          <Route path='/Projects' component={projects} />
-          <Route path='/Contact' component={contact} />
-        </Switch>
-      <FooterMenu />
+      <BrowserRouter basename={process.env.PUBLIC_URL}> 
+        <Menu />
+        <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/About' component={About} />
+            <Route path='/Services' component={services} />
+            <Route path='/Projects' component={projects} />
+            <Route path='/Contact' component={contact} />
+          </Switch>
+        <FooterMenu />
+      </BrowserRouter>
+      
       </div>
     </div>
     
