@@ -6,7 +6,7 @@ const services = () => {
 
     return (
         <div className='page_container'>
-            <h2 style={{color: 'white'}}>My Services</h2>
+            <h2 style={{color: 'white', marginBottom: "30px"}}>What you get</h2>
             <div className="service-list">
             {Data.map((ele) => {
                 return <div key={ele.id} className="service-item">
