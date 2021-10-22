@@ -16,7 +16,7 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}> 
         <Menu />
         <Switch>
-            <Route exact path='/' component={Home} />
+            <Route path='/' exact component={Home} />
             <Route path='/About' component={About} />
             <Route path='/Services' component={services} />
             <Route path='/Projects' component={projects} />
@@ -24,7 +24,6 @@ function App() {
           </Switch>
         <FooterMenu />
       </BrowserRouter>
-      
       </div>
     </div>
     
