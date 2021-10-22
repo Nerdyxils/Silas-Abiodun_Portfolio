@@ -5,7 +5,7 @@ import './contact.css'
 const contact = () => {
     return (
         <div className="page_container">
-            <h1 style={{color: 'white'}}>Contact</h1>
+            <h2 style={{color: 'white'}}>Contact</h2>
         </div>
     )
 }
