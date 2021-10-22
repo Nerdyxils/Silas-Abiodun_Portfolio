@@ -1,5 +1,5 @@
 input {
-    width: 50%;
+    width: 100%;
     background: transparent;
     border: none;
     border-bottom: 1px solid #ccc;
@@ -11,8 +11,12 @@ input:focus {
     border: none;
 }
 
+input>div {
+    color: red;
+}
+
 button {
-    width: 50%;
+    width: 100%;
     padding: 20px 10px;
     background-color: transparent;
     color: #ef2d56;

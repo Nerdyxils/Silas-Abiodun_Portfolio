@@ -6,8 +6,16 @@ import './contact.css'
 const contact = () => {
     return (
         <div className="page_container">
-            <h2 style={{color: 'white', marginBottom: '30px'}}>Contact</h2>
-            <ContactComponent />
+            <div className="row">
+                <div className="contact_sec">
+                    <h2 style={{color: 'white', marginBottom: '30px'}}>Contact Me</h2>
+                    <ContactComponent />
+                </div>
+                <div className="blank_sec">
+                    
+                </div>
+            </div>
+            
         </div>
     )
 }

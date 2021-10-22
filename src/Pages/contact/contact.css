@@ -1,0 +1,10 @@
+.blank_sec, .contact_sec {
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .blank_sec {
+        display: none;
+    }
+}
+

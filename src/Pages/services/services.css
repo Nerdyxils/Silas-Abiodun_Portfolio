@@ -12,6 +12,7 @@
 .service-item {
     background: var(--hero-bg-1);
     padding: 30px;
+    height: 400px;
     border-radius: 5px;
     box-shadow: var(--light-shadow);
     transition: all .4s ease-in-out 0s;

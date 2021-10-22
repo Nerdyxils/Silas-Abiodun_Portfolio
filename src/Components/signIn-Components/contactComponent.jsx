@@ -36,7 +36,7 @@ const ContactComponent = () => {
             id="name"
             name="name"
             type="text"
-            placeholder="Name"
+            placeholder="Your Name"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.name}
@@ -50,7 +50,7 @@ const ContactComponent = () => {
             id="email"
             name="email"
             type="email"
-            placeholder="Email Address"
+            placeholder="Your Email Address"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.email}
@@ -64,7 +64,7 @@ const ContactComponent = () => {
             id="messageTitle"
             name="messageTitle"
             type="text"
-            placeholder="Title"
+            placeholder="Write a Subject"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.messageTitle}
@@ -78,7 +78,7 @@ const ContactComponent = () => {
             id="message"
             name="message"
             type="text"
-            placeholder="Message"
+            placeholder="Your Message"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.message}
