@@ -19,6 +19,7 @@ button {
     border: 1px solid #ef2d56;
     font-weight: 600;
     font-size: 14px;
+    margin-top: 30px;
 }
 
 button:hover, button:focus {
