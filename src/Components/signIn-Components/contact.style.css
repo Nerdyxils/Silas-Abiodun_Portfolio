@@ -1,0 +1,38 @@
+input {
+    width: 50%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 10px;
+    font-size: 14px;
+}
+
+input:focus {
+    border: none;
+}
+
+button {
+    width: 50%;
+    padding: 20px 10px;
+    background-color: transparent;
+    color: #ef2d56;
+    border: 1px solid #ef2d56;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+button:hover, button:focus {
+    color: #fff;
+    background-color: #ef2d56;
+}
+
+@media(max-width: 800px) {
+    input {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    button {
+        width: 100%;
+    }
+}
