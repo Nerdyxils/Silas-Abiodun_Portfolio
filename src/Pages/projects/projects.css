@@ -1,7 +1,6 @@
 .project_lists {
     display: flex;
     justify-content: space-between;
-
 }
 
 .project_lists > div {
@@ -49,13 +48,25 @@
 .text a {
     color: #fff;
     text-decoration: none;
+    margin: 0 10px;
 }
 
 .p_title {
     line-height: 30px;
     color: #ef2d56;
+    margin-bottom: 20px;
 }
 
 .p_image {
     max-width: 100%;
+}
+
+@media (max-width: 800px) {
+    .project_lists {
+        display: block;
+    }
+    
+    .project_lists > div {
+        margin-top: 30px;
+    }
 }

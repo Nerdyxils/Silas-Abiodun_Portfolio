@@ -1,9 +1,10 @@
 import React from 'react'
+import { ExternalLink } from 'react-external-link'
 import projectData from '../../projectData'
 import { FaExternalLinkAlt, FaGithubSquare } from 'react-icons/fa'
 import './projects.css'
 
-import { Link } from 'react-router-dom'
+
 const projects = () => {
     return (
         <div className="page_container">
@@ -15,12 +16,12 @@ const projects = () => {
                         <img src={project.img} alt="project" className="p_image" />
                         <div class="overlay">
                             <div class="text">
-                                <Link> 
+                                <ExternalLink href={project.liveProject}> 
                                     <FaExternalLinkAlt />
-                                </Link>
-                                <Link>
+                                </ExternalLink>
+                                <ExternalLink href={project.repoLink}>
                                     <FaGithubSquare />
-                                </Link>
+                                </ExternalLink>
                             </div>
                         </div>
                     </div>
