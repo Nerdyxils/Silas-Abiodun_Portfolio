@@ -1,0 +1,52 @@
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-list > div {
+    flex: 1 1 auto;
+    margin: 10px;  /* and that, will result in a 10px gap */
+}
+
+.service-item {
+    background: var(--hero-bg-1);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: var(--light-shadow);
+    transition: all .4s ease-in-out 0s;
+}
+
+.service-title{
+    margin: 10px auto;
+    color: #ef2d56;
+}
+
+.service-item:hover {
+    background: linear-gradient(90deg,#f61b10,#ef0963);
+    color: #fff !important;
+    box-shadow: 0 0 3px black;
+    margin-top: -10px;
+}
+
+.service-item img {
+    max-width: 100%;
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
+   
+}
+
+.icon {
+    fill: #ef2d56 !important;
+}
+
+@media (max-width: 800px) {
+    .service-list {
+        display: block;
+    }
+
+    .service-list > div {
+        margin-top: 40px;
+    }
+}

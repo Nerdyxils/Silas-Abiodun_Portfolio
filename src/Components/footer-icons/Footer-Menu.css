@@ -1,0 +1,20 @@
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    margin: 10px auto;
+    padding: 0px 5px;
+    color: #ef2d56 !important;
+    text-decoration: none;
+    transition: all .4s ease-in-out 0s;
+}
+
+.icon:hover {
+    transform: scale(0.7);
+}
