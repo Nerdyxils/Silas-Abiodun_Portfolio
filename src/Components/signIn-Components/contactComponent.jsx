@@ -18,7 +18,9 @@ const ContactComponent = () => {
                 console.log(result.text);
                 Swal.fire({
                     icon: 'success',
-                    title: 'Message Sent Successfully'
+                    title: 'Message Sent Successfully',
+                    color: '#fff',
+                    background: '#101010'
                 })
             }, (error) => {
                 console.log(error.text);
