@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { FaHtml5, FaCss3Alt, FaBootstrap, FaSass, FaGitAlt, FaGithubSquare, FaReact, FaNpm } from 'react-icons/fa'
 import { SiJavascript, SiRedux, SiFirebase, SiTailwindcss } from 'react-icons/si'
+import { motion } from 'framer-motion';
 import myImg from '../../assets/silas.jpg'
 import './about.css'
 
@@ -18,11 +19,21 @@ const About = () => {
         <div className="page_container">
             <div className="row">
                 <div className="col-md-6 img-div">
-                    <h2 className="abt_ht_mb">About Me</h2>
+                <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}  
+            > 
+                <h2 className="abt_ht_mb">About Me</h2>
+            </motion.div>
                     <img src={myImg} alt="Silas Front end developer" className="image-silas" />
                 </div>
                 <div className="col-md-6 txt-div">
-                    <h2 className="abt_ht">About me</h2>
+                <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}  
+                > 
+                <h2 className="abt_ht">About me</h2>
+            </motion.div>
                     <p className="description">
                         My name is Silas Abiodun and I am a Front End Developer, 
                         sometimes I find myself managing projects and leading teams.

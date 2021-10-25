@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 import Typing from 'react-typing-animation';
 import './Home.css'
 
@@ -7,7 +8,12 @@ const Home = () => (
     <div className="page_container">
         <div className="col-lg-12 main-c">
             <div className="text-left">
-                <span className="txt-1">Hey there!</span>
+            <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}  
+            > 
+            <span className="txt-1">Hey there!</span>
+            </motion.div>
                 <h1 className="txt-2">I'm Silas</h1>
                 <Typing>
                     <span className="alt-txt">Front End Developer</span>

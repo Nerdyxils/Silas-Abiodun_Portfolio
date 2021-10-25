@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as BrowserRouter, Switch, Route } from 'react-router-dom';
+import { CSSTransitionGroup } from 'react-transition-group'
 import './App.css';
 import FooterMenu from './Components/footer-icons/Footer-Menu';
 import Menu from './Components/menu-item/Menu';
