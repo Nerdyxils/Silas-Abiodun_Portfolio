@@ -1,11 +1,23 @@
-input {
+input{
     width: 100%;
     background: transparent;
     border: none;
     border-bottom: 1px solid #ccc;
     padding: 20px 10px;
+    color: #fff;
     font-size: 14px;
 }
+
+textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 10px;
+    height: 150px;
+    color: #fff;
+    font-size: 14px;
+} 
 
 input:focus {
     border: none;
@@ -24,6 +36,7 @@ button {
     font-weight: 600;
     font-size: 14px;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 button:hover, button:focus {

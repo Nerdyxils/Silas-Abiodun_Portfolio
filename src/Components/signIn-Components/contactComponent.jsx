@@ -1,95 +1,70 @@
 import React from 'react'
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import * as emailjs from "emailjs-com";
 import './contact.style.css'
+import Swal from 'sweetalert2';
+import { Input } from "semantic-ui-react";
+
+const SERVICE_ID = "service_7ing9hi";
+const TEMPLATE_ID = "template_cq899ev";
+const USER_ID = "user_MgUIWcsi1jH4DWOrLSNHx";
 
 const ContactComponent = () => {
-    const formik = useFormik({
-        initialValues: {
-          name: '',
-          email: '',
-          messageTitle: '',
-          message: ''
-        },
-        validationSchema: Yup.object({
-          name: Yup.string()
-            .max(15, 'Must be 15 characters or less')
-            .required('Required'),
-          messageTitle: Yup.string()
-            .max(15, 'Must be 15 characters or less')
-            .required('Required'),
-          message: Yup.string()
-            .max(20, 'Must be 20 characters or less')
-            .required('Required'),
-          email: Yup.string().email('Invalid email address').required('Required'),
-        }),
-        onSubmit: values => {
-          alert(JSON.stringify(values, null, 2));
-        },
-      });
-
-
-      return (
-        <form onSubmit={formik.handleSubmit}>
-          {/* <label htmlFor="name">First Name</label> */}
-          <input
-            id="name"
-            name="name"
-            type="text"
-            placeholder="Your Name"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.name}
-          />
-          {formik.touched.name && formik.errors.name ? (
-            <div>{formik.errors.name}</div>
-          ) : null}
-
-        {/* <label htmlFor="email">Email Address</label> */}
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Your Email Address"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.email}
-          />
-          {formik.touched.email && formik.errors.email ? (
-            <div>{formik.errors.email}</div>
-          ) : null}
     
-          {/* <label htmlFor="lastName">Last Name</label> */}
-          <input
-            id="messageTitle"
-            name="messageTitle"
-            type="text"
-            placeholder="Write a Subject"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.messageTitle}
-          />
-          {formik.touched.messageTitle && formik.errors.messageTitle ? (
-            <div>{formik.errors.messageTitle}</div>
-          ) : null}
+    const handleOnSubmit = (e) => {
+        e.preventDefault();
 
-          {/* <label htmlFor="lastName">Last Name</label> */}
-          <input
-            id="message"
-            name="message"
-            type="text"
-            placeholder="Your Message"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.message}
-          />
-          {formik.touched.message && formik.errors.message ? (
-            <div>{formik.errors.message}</div>
-          ) : null}
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+            .then((result) => {
+                console.log(result.text);
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Message Sent Successfully'
+                })
+            }, (error) => {
+                console.log(error.text);
+                Swal.fire({
+                    icon : 'error',
+                    title: 'Ooops, something went wrong',
+                    text: error.text,
+                })
+            });
+            e.target.reset()
+    }
     
-          <button type="submit">Submit</button>
-        </form>
-      );
+        return <div>
+            <form className="ui form" onSubmit={handleOnSubmit}>
+                <input 
+                    id="name"
+                    name="user_name"
+                    control={Input}
+                    placeholder="Your Name"
+                    required
+                    rows={1}
+                />
+
+                <input 
+                    id="email"
+                    name="user_email"
+                    control={Input}
+                    placeholder="Your Email Address"
+                    required
+                    // error={this.state.errors.email}
+                    rows={1}
+                />
+
+                <textarea 
+                    id="feedback"
+                    name="user_message"
+                    control={Input}
+                    placeholder="What would you like to chat about?"
+                    required
+                />
+
+                <button >
+                    Send Message
+                </button>
+            </form>
+        </div>
 }
  
 export default ContactComponent;
