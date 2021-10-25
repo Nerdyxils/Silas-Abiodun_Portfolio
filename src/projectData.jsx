@@ -1,4 +1,4 @@
-export default [
+const projectData = [
     {
         id: 5,
         img : './jayo.png',
@@ -32,3 +32,5 @@ export default [
         repoLink : 'https://github.com/Nerdyxils/Food-App'
     },
 ]
+
+export default projectData

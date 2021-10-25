@@ -1,12 +1,13 @@
-import React from 'react'
-import { ExternalLink } from 'react-external-link'
+import React from 'react';
 import projectData from '../../projectData'
+import { ExternalLink } from 'react-external-link'
 import { FaExternalLinkAlt, FaGithubSquare } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+
 import './projects.css'
 
 
-const projects = () => {
+export default function projects ()  {
     return (
         <div className="page_container">
             <motion.div
@@ -16,28 +17,26 @@ const projects = () => {
                  <h2 style={{color : 'white'}}>My Projects</h2>
             </motion.div>
             <div className="project_lists">
-                {projectData.map((project) => {
-                    return <div key={project.id} className="project_card">
+                {projectData.map((x) => {
+                    return <div key={x.id} className="project_card">
                     <div className="img_sec">
-                        <img src={project.img} alt="project" className="p_image" />
+                        <img src={x.img} alt="project" className="p_image" />
                         <div class="overlay">
                             <div class="text">
-                                <ExternalLink href={project.liveProject}> 
+                                <ExternalLink href={x.liveProject}> 
                                     <FaExternalLinkAlt />
                                 </ExternalLink>
-                                <ExternalLink href={project.repoLink}>
+                                <ExternalLink href={x.repoLink}>
                                     <FaGithubSquare />
                                 </ExternalLink>
                             </div>
                         </div>
                     </div>
-                        <h4 className="p_title">{project.projectTitle}</h4>
-                        <p className="p_text">{project.projectTools}</p>
+                        <h4 className="p_title">{x.projectTitle}</h4>
+                        <p className="p_text">{x.projectTools}</p>
                     </div>
                 })}
             </div>
         </div>
     )
 }
-
-export default projects;

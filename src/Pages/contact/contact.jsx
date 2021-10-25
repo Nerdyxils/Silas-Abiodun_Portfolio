@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ContactComponent from '../../Components/signIn-Components/contactComponent';
 import { motion } from 'framer-motion'
 
@@ -13,7 +13,7 @@ const contact = () => {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}  
                 > 
-                <h2 style={{color: 'white', marginBottom: '30px'}}>Contact Me</h2>
+                <h2 style={{color: 'white', marginBottom: '30px'}}>Would You Like To Work With Me?</h2>
             </motion.div>
                     <ContactComponent />
                 </div>

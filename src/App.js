@@ -1,5 +1,6 @@
-import { AnimatePresence, mot } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import React from 'react'
+// eslint-disable-next-line
 import { BrowserRouter as BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import FooterMenu from './Components/footer-icons/Footer-Menu';

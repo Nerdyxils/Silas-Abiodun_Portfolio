@@ -1,4 +1,4 @@
-export default [
+const Data = [
     {
         id: 1,
         icon : './fast.svg',
@@ -24,3 +24,5 @@ export default [
         serviceText : 'Would you not like a website that is interactive and dynamic in nature..'
     }
 ]
+
+export default Data;
