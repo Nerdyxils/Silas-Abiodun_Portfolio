@@ -16,7 +16,8 @@ const About = () => {
     // const handlefocus3 = () =>  clicked ? setClicked('') : setClicked('tab-item focus');
 
     return (
-        <div className="page_container">
+        <motion.div exit={{ opacity: 0 }}> 
+            <div className="page_container">
             <div className="row">
                 <div className="col-md-6 img-div">
                 <motion.div
@@ -88,6 +89,9 @@ const About = () => {
                 </div>
             </div>
         </div>
+        
+        </motion.div>
+        
     )
 }
 

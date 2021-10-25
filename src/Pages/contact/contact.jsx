@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ContactComponent from '../../Components/signIn-Components/contactComponent';
+import { motion } from 'framer-motion'
 
 import './contact.css'
 
@@ -8,11 +9,16 @@ const contact = () => {
         <div className="page_container">
             <div className="row">
                 <div className="contact_sec">
-                    <h2 style={{color: 'white', marginBottom: '30px'}}>Contact Me</h2>
+                <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}  
+                > 
+                <h2 style={{color: 'white', marginBottom: '30px'}}>Contact Me</h2>
+            </motion.div>
                     <ContactComponent />
                 </div>
                 <div className="blank_sec">
-                    
+
                 </div>
             </div>
             

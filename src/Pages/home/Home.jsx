@@ -16,7 +16,7 @@ const Home = () => (
             </motion.div>
                 <h1 className="txt-2">I'm Silas</h1>
                 <Typing>
-                    <span className="alt-txt">Front End Developer</span>
+                    <span className="alt-txt">A Front End Developer</span>
                     <Typing.Backspace count={19} delay={900} />
                     <span className="alt-txt">ReactJs Developer</span>
                     <Typing.Backspace count={17} delay={900} />

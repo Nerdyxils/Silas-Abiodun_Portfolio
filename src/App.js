@@ -1,6 +1,6 @@
+import { AnimatePresence, mot } from 'framer-motion';
 import React from 'react'
 import { BrowserRouter as BrowserRouter, Switch, Route } from 'react-router-dom';
-import { CSSTransitionGroup } from 'react-transition-group'
 import './App.css';
 import FooterMenu from './Components/footer-icons/Footer-Menu';
 import Menu from './Components/menu-item/Menu';
@@ -16,13 +16,16 @@ function App() {
       <div className="body">
       <BrowserRouter basename={process.env.PUBLIC_URL}> 
         <Menu />
-        <Switch>
-            <Route path='/' exact component={Home} />
-            <Route path='/About' component={About} />
-            <Route path='/Services' component={services} />
-            <Route path='/Projects' component={projects} />
-            <Route path='/Contact' component={contact} />
-          </Switch>
+        <AnimatePresence exitBeforeEnter>
+          <Switch>
+              <Route path='/' exact component={Home} />
+              <Route path='/About' component={About} />
+              <Route path='/Services' component={services} />
+              <Route path='/Projects' component={projects} />
+              <Route path='/Contact' component={contact} />
+            </Switch>
+        </AnimatePresence>
+        
         <FooterMenu />
       </BrowserRouter>
       </div>
