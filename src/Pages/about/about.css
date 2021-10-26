@@ -47,13 +47,14 @@
     border-bottom: 3px solid #fff;
 }
 
-.abt-details .tab-item:hover {
+/* .abt-details .tab-item:hover {
     color: #ef2d56;
     border-bottom: 3px solid #ef2d56;
-}
+} */
+
 .focus {
-    color: #ef2d56;
-    border-bottom: 3px solid #ef2d56;
+    color: #ef2d56 !important;
+    border-bottom: 3px solid #ef2d56 !important;
 }
 
 .skills-icon {

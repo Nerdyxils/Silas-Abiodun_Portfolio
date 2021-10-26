@@ -8,12 +8,17 @@ import './about.css'
 
 const About = () => {
 
-    const [clicked, setClicked] = useState('')
+    const [clicked, setClicked] = useState(false)
 
-
-    const handlefocus1 = () =>  clicked ? setClicked('') : setClicked('tab-item focus');
-    // const handlefocus2 = () =>  clicked ? setClicked('') : setClicked('tab-item focus');
-    // const handlefocus3 = () =>  clicked ? setClicked('') : setClicked('tab-item focus');
+    const handleClick1 = () => {
+        setClicked(!clicked)
+    }
+    const handleClick2 = () => {
+        setClicked(!clicked)
+    }
+    const handleClick3 = () => {
+        setClicked(!clicked)
+    }
 
     return (
         <motion.div exit={{ opacity: 0 }}> 
@@ -49,9 +54,9 @@ const About = () => {
                     <div className="abt-details">
                         <Tabs>
                             <TabList className="tablist">
-                                <Tab className={clicked || 'tab-item' } onClick={handlefocus1} activeClassName="focus">Main Skills</Tab>
-                                <Tab className={clicked || 'tab-item' } activeClassName="focus">Experience</Tab>
-                                <Tab className={clicked || 'tab-item' } activeClassName="focus">Education</Tab>
+                                <Tab onClick={handleClick1} className={clicked ? 'tab-item focus' : 'tab-item'}>Main Skills</Tab>
+                                <Tab onClick={handleClick2} className={clicked ? 'tab-item' : 'tab-item focus'}>Experience</Tab>
+                                <Tab onClick={handleClick3} className={clicked ? 'tab-item' : 'tab-item focus'}>Education</Tab>
                             </TabList>
 
                             <TabPanel>
@@ -89,7 +94,6 @@ const About = () => {
                 </div>
             </div>
         </div>
-        
         </motion.div>
         
     )
