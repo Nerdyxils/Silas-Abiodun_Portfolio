@@ -6,9 +6,29 @@ import { motion } from 'framer-motion'
 
 import './projects.css'
 
-
 export default function projects ()  {
+    const pageVariants = {
+        in: {
+          opacity: 1,
+          y: 0
+        },
+        out: {
+          opacity: 0,
+          y: "-100%"
+        }
+      }
+    
+      const pageTransition = {
+        duration: 0.5
+      }
     return (
+    <motion.div
+    initial='out'
+    animate='in' 
+    exit='out'
+    variants={pageVariants}
+    transition={pageTransition} 
+        >
         <div className="page_container">
             <motion.div
                     initial={{ opacity: 0, y: -50 }}
@@ -38,5 +58,6 @@ export default function projects ()  {
                 })}
             </div>
         </div>
+    </motion.div>
     )
 }

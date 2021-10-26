@@ -5,8 +5,30 @@ import './services.css'
 
 const services = () => {
 
+    const pageVariants = {
+        in: {
+          opacity: 1,
+          x: 0
+        },
+        out: {
+          opacity: 0,
+          x: "-100%"
+        }
+      }
+    
+      const pageTransition = {
+        duration: 0.5
+      }
+
     return (
-        <div className='page_container'>
+        <motion.div
+            initial='out'
+            animate='in' 
+            exit='out'
+            variants={pageVariants}
+            transition={pageTransition}
+        >
+            <div className='page_container'>
              <motion.div
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}  
@@ -23,6 +45,8 @@ const services = () => {
             })}
             </div>
         </div>
+        </motion.div>
+       
         
     )
 }

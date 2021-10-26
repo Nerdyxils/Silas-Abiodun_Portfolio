@@ -20,17 +20,36 @@ const About = () => {
         setClicked(!clicked)
     }
 
+    const pageVariants = {
+        in: {
+          opacity: 1,
+          y: 0
+        },
+        out: {
+          opacity: 0,
+          y: "-100%"
+        }
+      }
+    
+      const pageTransition = {
+        duration: 0.5
+      }
+
     return (
-        <motion.div exit={{ opacity: 0 }}> 
+        <motion.div initial='out'
+        animate='in' 
+        exit='out'
+        variants={pageVariants}
+        transition={pageTransition} > 
             <div className="page_container">
             <div className="row">
                 <div className="col-md-6 img-div">
                 <motion.div
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}  
-            > 
-                <h2 className="abt_ht_mb">About Me</h2>
-            </motion.div>
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}  
+                > 
+                    <h2 className="abt_ht_mb">About Me</h2>
+                </motion.div>
                     <img src={myImg} alt="Silas Front end developer" className="image-silas" />
                 </div>
                 <div className="col-md-6 txt-div">
@@ -38,8 +57,8 @@ const About = () => {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}  
                 > 
-                <h2 className="abt_ht">About me</h2>
-            </motion.div>
+                    <h2 className="abt_ht">About me</h2>
+                </motion.div>
                     <p className="description">
                         My name is Silas Abiodun and I am a Front End Developer, 
                         sometimes I find myself managing projects and leading teams.

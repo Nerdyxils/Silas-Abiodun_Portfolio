@@ -12,9 +12,10 @@ import projects from './Pages/projects/projects';
 import services from './Pages/services/services';
 
 function App() {
+
   return (
     <div className="main">
-      <div className="body">
+      <div className="body" style={{overflow: 'hidden'}}>
       <BrowserRouter basename={process.env.PUBLIC_URL}> 
         <Menu />
         <AnimatePresence exitBeforeEnter>
@@ -26,12 +27,10 @@ function App() {
               <Route path='/Contact' component={contact} />
             </Switch>
         </AnimatePresence>
-        
         <FooterMenu />
       </BrowserRouter>
       </div>
     </div>
-    
   );
 }
 
