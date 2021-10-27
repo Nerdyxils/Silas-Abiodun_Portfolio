@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Silas-Abiodun_Portfolio/static/css/main.42a4d1a3.chunk.css",
-    "main.js": "/Silas-Abiodun_Portfolio/static/js/main.3aa003fd.chunk.js",
-    "main.js.map": "/Silas-Abiodun_Portfolio/static/js/main.3aa003fd.chunk.js.map",
-    "runtime-main.js": "/Silas-Abiodun_Portfolio/static/js/runtime-main.6bd78fdf.js",
-    "runtime-main.js.map": "/Silas-Abiodun_Portfolio/static/js/runtime-main.6bd78fdf.js.map",
-    "static/js/2.04ceeaa3.chunk.js": "/Silas-Abiodun_Portfolio/static/js/2.04ceeaa3.chunk.js",
-    "static/js/2.04ceeaa3.chunk.js.map": "/Silas-Abiodun_Portfolio/static/js/2.04ceeaa3.chunk.js.map",
-    "index.html": "/Silas-Abiodun_Portfolio/index.html",
-    "static/css/main.42a4d1a3.chunk.css.map": "/Silas-Abiodun_Portfolio/static/css/main.42a4d1a3.chunk.css.map",
-    "static/js/2.04ceeaa3.chunk.js.LICENSE.txt": "/Silas-Abiodun_Portfolio/static/js/2.04ceeaa3.chunk.js.LICENSE.txt",
-    "static/media/menu.b5cbaaf5.svg": "/Silas-Abiodun_Portfolio/static/media/menu.b5cbaaf5.svg",
-    "static/media/silas.3d2fa56a.jpg": "/Silas-Abiodun_Portfolio/static/media/silas.3d2fa56a.jpg",
-    "static/media/x.19d4777b.svg": "/Silas-Abiodun_Portfolio/static/media/x.19d4777b.svg"
+    "main.css": "/static/css/main.120c89f3.chunk.css",
+    "main.js": "/static/js/main.f50424af.chunk.js",
+    "main.js.map": "/static/js/main.f50424af.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.75b893ca.js",
+    "runtime-main.js.map": "/static/js/runtime-main.75b893ca.js.map",
+    "static/js/2.0c543d3b.chunk.js": "/static/js/2.0c543d3b.chunk.js",
+    "static/js/2.0c543d3b.chunk.js.map": "/static/js/2.0c543d3b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.120c89f3.chunk.css.map": "/static/css/main.120c89f3.chunk.css.map",
+    "static/js/2.0c543d3b.chunk.js.LICENSE.txt": "/static/js/2.0c543d3b.chunk.js.LICENSE.txt",
+    "static/media/menu.b5cbaaf5.svg": "/static/media/menu.b5cbaaf5.svg",
+    "static/media/silas.3d2fa56a.jpg": "/static/media/silas.3d2fa56a.jpg",
+    "static/media/x.19d4777b.svg": "/static/media/x.19d4777b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6bd78fdf.js",
-    "static/js/2.04ceeaa3.chunk.js",
-    "static/css/main.42a4d1a3.chunk.css",
-    "static/js/main.3aa003fd.chunk.js"
+    "static/js/runtime-main.75b893ca.js",
+    "static/js/2.0c543d3b.chunk.js",
+    "static/css/main.120c89f3.chunk.css",
+    "static/js/main.f50424af.chunk.js"
   ]
 }
