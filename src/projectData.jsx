@@ -8,15 +8,15 @@ const projectData = [
         repoLink : 'https://github.com/Nerdyxils/Jayo_web'
     },
     {
-        id: 5,
-        img : './silitech.png',
-        projectTitle : 'Silitech Landing Page',
-        projectTools : 'ReactJs',
-        liveProject : 'https://nerdyxils.github.io/Silitech/',
-        repoLink : 'https://github.com/Nerdyxils/Silitech'
+        id: 6,
+        img : './windBnB.png',
+        projectTitle : 'WindBnB ~ AirBnB Clone',
+        projectTools : 'ReactJs & MaterialUI',
+        liveProject : 'https://nerdyxils.github.io/windbnb/',
+        repoLink : 'https://github.com/Nerdyxils/windbnb'
     },
     {
-        id: 5,
+        id: 7,
         img : './manage.png',
         projectTitle : 'Manage Landing Page',
         projectTools : 'ReactJs',
@@ -24,7 +24,7 @@ const projectData = [
         repoLink : 'https://github.com/Nerdyxils/Manage-Landing-Page'
     },
     {
-        id: 5,
+        id: 8,
         img : './Food App.png',
         projectTitle : 'Food App',
         projectTools : 'ReactJs/API.',
