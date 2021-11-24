@@ -18,15 +18,17 @@ function App() {
       <div className="body" style={{overflow: 'hidden'}}>
       <BrowserRouter basename={process.env.PUBLIC_URL}> 
         <Menu />
-        <AnimatePresence exitBeforeEnter>
-          <Switch>
-              <Route path='/' exact component={Home} />
-              <Route path='/About' component={About} />
-              <Route path='/Services' component={services} />
-              <Route path='/Projects' component={projects} />
-              <Route path='/Contact' component={contact} />
-            </Switch>
-        </AnimatePresence>
+          <AnimatePresence exitBeforeEnter>
+            <Switch>
+                <Route path='/' exact component={Home} />
+                <Route path='/About' component={About} />
+                <Route path='/Services' component={services} />
+                <Route path='/Projects' component={projects} />
+                <Route path='/Contact' component={contact} />
+              </Switch>
+          </AnimatePresence>
+        
+        
         <FooterMenu />
       </BrowserRouter>
       </div>

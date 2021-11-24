@@ -1,14 +1,14 @@
 .page_container {
     width: 95%;
+    position: relative;
+    top: 50%; 
     margin-right: auto;
     margin-left: auto;
     margin-top: 0;
     margin-bottom: 0;
     padding: 6.0em 2em;
-    top: 50%;
     box-shadow: var(--dark-shadow);
-    background-color: #000;
-    
+    background-color: #000;   
 }
 
 /* .main-c {
