@@ -12,7 +12,7 @@
     "formik": "^2.2.9",
     "framer-motion": "^4.1.17",
     "react": "^17.0.2",
-    "react-animated-text-builders": "^1.1.0",
+    "react-animated-text-builders": "^1.1.1",
     "react-bootstrap": "^2.0.0-rc.1",
     "react-dom": "^17.0.2",
     "react-external-link": "^1.2.2",
@@ -29,6 +29,10 @@
     "web-vitals": "^1.1.2",
     "yup": "^0.32.11"
   },
+  "resolutions": {
+    "react-dom": "^17.0.2"
+  },
+  
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
