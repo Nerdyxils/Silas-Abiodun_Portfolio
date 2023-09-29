@@ -48,7 +48,7 @@ const Home = () => (
                         <Typing.Backspace count={15} delay={900} />
                         <span className="alt-txt">Front End Developer</span>
                     </Typing>
-                    <h1 className="txt-2">based in Toronto, Canada.</h1>
+                    <h1 className="txt-2">based remotely in Toronto, Canada.</h1>
                 </div>
             </div>
         </div>
