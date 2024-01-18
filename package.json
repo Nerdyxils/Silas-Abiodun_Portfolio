@@ -1,7 +1,7 @@
 {
   "homepage": "https://silas-abiodun.vercel.app/",
   "name": "my-portfolio",
-  "version": "0.1.0",
+  "version": "1.1.1",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -29,10 +29,9 @@
     "web-vitals": "^1.1.2",
     "yup": "^0.32.11"
   },
-    "resolutions": {
+  "resolutions": {
     "react-dom": "^17.0.2"
   },
-  
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

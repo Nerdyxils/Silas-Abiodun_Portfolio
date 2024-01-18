@@ -3,22 +3,16 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { FaHtml5, FaCss3Alt, FaBootstrap, FaSass, FaGitAlt, FaGithubSquare, FaReact, FaNpm } from 'react-icons/fa'
 import { SiJavascript, SiRedux, SiFirebase, SiTailwindcss } from 'react-icons/si'
 import { motion } from 'framer-motion';
-import myImg from '../../assets/silas.jpg'
+import myImg from '../../assets/silas_new.jpg'
 import './about.css'
 
 const About = () => {
 
-    const [clicked, setClicked] = useState(false)
+    const [clickedTab, setClickedTab] = useState(0);
 
-    const handleClick1 = () => {
-        setClicked(!clicked)
-    }
-    const handleClick2 = () => {
-        setClicked(!clicked)
-    }
-    const handleClick3 = () => {
-        setClicked(!clicked)
-    }
+  const handleTabClick = (index) => {
+    setClickedTab(index);
+  };
 
     const pageVariants = {
         in: {
@@ -72,11 +66,17 @@ const About = () => {
                     </p>
                     <div className="abt-details">
                         <Tabs>
-                            <TabList className="tablist">
-                                <Tab onClick={handleClick1} className={clicked ? 'tab-item focus' : 'tab-item'}>Main Skills</Tab>
-                                <Tab onClick={handleClick2} className={clicked ? 'tab-item' : 'tab-item focus'}>Experience</Tab>
-                                <Tab onClick={handleClick3} className={clicked ? 'tab-item' : 'tab-item focus'}>Education</Tab>
-                            </TabList>
+                        <TabList className="tablist">
+                            <Tab onClick={() => handleTabClick(0)} className={clickedTab === 0 ? 'tab-item focus' : 'tab-item'}>
+                                Main Skills
+                            </Tab>
+                            <Tab onClick={() => handleTabClick(1)} className={clickedTab === 1 ? 'tab-item focus' : 'tab-item'}>
+                                Experience
+                            </Tab>
+                            <Tab onClick={() => handleTabClick(2)} className={clickedTab === 2 ? 'tab-item focus' : 'tab-item'}>
+                                Education
+                            </Tab>
+                         </TabList>
 
                             <TabPanel>
                                 <div className="skills-icon">
