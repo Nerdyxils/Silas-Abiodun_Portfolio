@@ -1,52 +1,69 @@
-import React from 'react'
+import React from 'react';
 import ContactComponent from '../../Components/signIn-Components/contactComponent';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import './contact.css';
 
-import './contact.css'
-
-const contact = () => {
-
-    const pageVariants = {
-        in: {
-          opacity: 1,
-          x: 0
+const Contact = () => {
+    const containerVariants = {
+        initial: { opacity: 0, y: 50 },
+        animate: { 
+            opacity: 1, 
+            y: 0,
+            transition: { 
+                type: "spring",
+                stiffness: 120,
+                damping: 15,
+                when: "beforeChildren",
+                staggerChildren: 0.2
+            }
         },
-        out: {
-          opacity: 0,
-          x: "-100%"
+        exit: { opacity: 0, y: -50 }
+    };
+
+    const childVariants = {
+        initial: { opacity: 0, x: -50 },
+        animate: { 
+            opacity: 1, 
+            x: 0,
+            transition: { type: "spring", stiffness: 100 }
         }
-      }
-    
-      const pageTransition = {
-        duration: 0.5
-      }
+    };
+
     return (
         <motion.div
-        initial='out'
-        animate='in' 
-        exit='out'
-        variants={pageVariants}
-        transition={pageTransition}
+            variants={containerVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
         >
-        <div className="page_container">
-            <div className="row">
-                <div className="contact_sec">
-                <motion.div
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 1, y: 0 }}  
-                > 
-                <h2 style={{color: 'white', marginBottom: '30px'}}>Would You Like To Work With Me?</h2>
-            </motion.div>
-                    <ContactComponent />
-                </div>
-                <div className="blank_sec">
-
-                </div>
+            <div className="page_container">
+                <motion.div 
+                    className="contact_wrapper"
+                    initial={{ scale: 0.9 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <motion.h2
+                        variants={childVariants}
+                        style={{ color: 'white' }}
+                        whileHover={{ 
+                            scale: 1.05, 
+                            textShadow: "0px 0px 10px rgba(239, 45, 86, 0.8)"
+                        }}
+                    >
+                        Would You Like To Work With Me?
+                    </motion.h2>
+                    <motion.div
+                        variants={childVariants}
+                        className="contact_form_container"
+                        whileHover={{ boxShadow: "0px 10px 30px rgba(0,0,0,0.3)" }}
+                    >
+                        <ContactComponent />
+                    </motion.div>
+                </motion.div>
             </div>
-        </div>
         </motion.div>
-        
-    )
-}
+    );
+};
 
-export default contact;
+export default Contact;

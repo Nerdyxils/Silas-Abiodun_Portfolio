@@ -3,62 +3,48 @@
 Variables
 ===============
 */
-
 :root {
-  /* Background Colors */
   --hero-bg-1: #101010;
-  /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
-  /* primary/main color */
   --clr-primary-5: hsl(205, 78%, 60%);
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: rgba(198,201,216,.75);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
-  --spacing01 : 3rem;
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
-  --fixed-width: 620px;
 }
+
 /*
 =============== 
 Global Styles
 ===============
 */
-
 *,
 ::after,
 ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: var(--hero-bg-1);
+  color: var(--clr-white);
+  overflow-x: hidden;
+}
+
+.main {
+  position: relative;
+  min-height: 100vh;
+  background: var(--hero-bg-1);
+}
+
+.body {
+  position: relative;
+  perspective: 1200px;
+  overflow: hidden;
 }
 
 h1 {
@@ -73,7 +59,7 @@ h2 {
 
 p {
   font-size: 1rem;
-  color: rgba(198,201,216,.75);
+  color: rgba(198, 201, 216, 0.75);
   line-height: 30px;
 }
 
@@ -81,13 +67,35 @@ a {
   text-decoration: none;
 }
 
+.page_container {
+  overflow: hidden;
+  transform-style: preserve-3d;
+  min-height: 100vh;
+}
 
-/* .pad-100 {
-  padding: 50px 0 50px 0;
-} */
+.project_card, .service-item {
+  transform-style: preserve-3d;
+}
+
+.icon, .p_image {
+  transition: all 0.3s ease;
+}
+
+.page-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(239, 45, 86, 0.2), transparent);
+  z-index: -1;
+}
 
 @media (max-width: 648px) {
-  .pad-100 {
-    padding: 20px 0 20px 0;
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 32px;
   }
 }

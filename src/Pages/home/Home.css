@@ -8,7 +8,9 @@
     margin-bottom: 0;
     padding: 6.0em 2em;
     box-shadow: var(--dark-shadow);
-    background-color: #000;   
+    background-color: #000; 
+    overflow: hidden;
+    perspective: 1000px;  
 }
 
 /* .main-c {

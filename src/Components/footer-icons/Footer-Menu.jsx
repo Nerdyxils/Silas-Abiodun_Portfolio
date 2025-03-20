@@ -10,16 +10,10 @@ export default function FooterMenu() {
                 <ExternalLink href="https://github.com/Nerdyxils/">
                     <FaGithubSquare className="icon" />
                 </ExternalLink>
-                <ExternalLink href="https://twitter.com/Ayomide_muyi">
-                    <FaTwitterSquare className="icon" />
-                </ExternalLink>
                 <ExternalLink href="https://www.linkedin.com/in/abiodun-silas-timi/">
                     <FaLinkedin className="icon" />
                 </ExternalLink>
-                <ExternalLink href="https://join.skype.com/invite/dWU2ZilFUvjc">
-                    <FaSkype className="icon" />
-                </ExternalLink>
-                <ExternalLink href="tel:+2349043378175">
+                <ExternalLink href="tel:+16479377031">
                     <FaPhoneSquare className="icon" />
                 </ExternalLink>
             </div>
