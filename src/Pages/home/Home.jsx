@@ -60,7 +60,7 @@ const Home = () => (
                         }}
                         whileHover={{ color: "#ff6b6b" }}
                     >
-                        I'm Silas
+                        I'm Silas Abiodun
                     </motion.h1>
                     <motion.div
                         initial={{ opacity: 0 }}
