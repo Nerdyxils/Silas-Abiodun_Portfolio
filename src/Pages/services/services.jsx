@@ -57,7 +57,7 @@ const Services = () => {
         >
             <div className="page_container">
                 <motion.h2
-                    style={{ color: 'white', marginBottom: "40px", marginRight: "10px", textAlign: 'center' }}
+                    className="services-title" // Added class for specific styling
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ 
                         opacity: 1, 
@@ -70,7 +70,7 @@ const Services = () => {
                 </motion.h2>
                 <div className="service-list">
                     {Data.map((ele, index) => {
-                        const Icon = ele.icon; // Extract the icon component
+                        const Icon = ele.icon;
                         return (
                             <motion.div 
                                 key={ele.id} 

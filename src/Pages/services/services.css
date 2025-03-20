@@ -2,6 +2,17 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-title {
+    color: white;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 .service-list {
@@ -10,7 +21,7 @@
     gap: 25px;
     padding: 0;
     margin: 0 auto;
-    max-width: 100%;
+    width: 100%; /* Ensure it takes full container width */
 }
 
 .service-item {
@@ -60,7 +71,7 @@
 }
 
 .service-item:hover .icon {
-    fill: #ffffff; /* Changes icon color to white on hover */
+    fill: #ffffff;
 }
 
 .service-title {
@@ -82,20 +93,38 @@
 .icon {
     width: 50px;
     height: 50px;
-    fill: #ef2d56; /* Default color */
+    fill: #ef2d56;
     margin-bottom: 15px;
-    transition: fill 0.3s ease; /* Smooth color transition */
+    transition: fill 0.3s ease;
     z-index: 1;
 }
 
 @media (max-width: 800px) {
+    .page_container {
+        padding: 15px; /* Slightly less padding on mobile */
+    }
+
+    .services-title {
+        font-size: 1.8rem; /* Slightly smaller title */
+        margin-bottom: 30px;
+    }
+
     .service-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* One column, full width */
         gap: 20px;
+        width: 100%; /* Ensure full width */
     }
 
     .service-item {
-        max-width: 350px;
-        margin: 0 auto;
+        width: 100%; /* Full width of container */
+        max-width: none; /* Remove max-width restriction */
+        margin: 0; /* Remove centering margin */
+    }
+}
+
+@media (max-width: 600px) {
+    .page_container {
+        display: block;
+        align-items: center;
     }
 }
