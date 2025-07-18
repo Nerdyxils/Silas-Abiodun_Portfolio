@@ -1,11 +1,18 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Silas Abiodun",
+  "name": "Silas Abiodun - Techpreneur, Web Developer & Project Manager",
+  "description": "Professional portfolio of Silas Abiodun - Techpreneur, Web Developer, and Project Manager. Founder of BrandGoto, specializing in AI-driven business automation and brand acceleration systems.",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "Logo.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "logo192.png",
@@ -20,6 +27,27 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ef2d56",
+  "background_color": "#101010",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "developer"],
+  "lang": "en-CA",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "screenshots": [
+    {
+      "src": "silas-abiodun-screenshot-mobile.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "silas-abiodun-screenshot-desktop.png", 
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    }
+  ]
 }

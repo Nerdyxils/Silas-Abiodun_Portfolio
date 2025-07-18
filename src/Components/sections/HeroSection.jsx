@@ -22,15 +22,17 @@ const HeroSection = () => {
     };
 
     return (
-        <motion.div 
+        <motion.section 
             className="hero-container" 
             id="hero"
             initial="hidden"
             animate="visible"
             variants={heroVariants}
+            role="banner"
+            aria-label="Silas Abiodun - Techpreneur and Web Developer Introduction"
         >
             <HybridMotionDiv className="hero-left" variants={heroTextVariants}>
-                <motion.span className="txt-1" variants={heroTextVariants}>Hey, I'm</motion.span>
+                <motion.p className="txt-1" variants={heroTextVariants}>Hey, I'm</motion.p>
                 <motion.h1 className="txt-2" variants={heroTextVariants}>Silas Abiodun</motion.h1>
                 <motion.div variants={heroTextVariants}>
                     <TypeAnimation
@@ -38,29 +40,44 @@ const HeroSection = () => {
                             'Techpreneur @ BrandGoto', 1800,
                             'Startup Launcher for Founders', 1800,
                             'Automation Strategist', 1800,
+                            'Web Developer & Project Manager', 1800,
+                            'AI-Driven Business Automation Expert', 1800,
                         ]}
-                        wrapper="span"
+                        wrapper="h2"
                         speed={80}
                         deletionSpeed={60}
                         repeat={Infinity}
                         className="alt-txt"
+                        aria-label="Silas Abiodun's professional roles and expertise"
                     />
                 </motion.div>
                 <motion.div className="hero-tagline" variants={heroTextVariants}>
-                    <span className="tagline-text">Building brands, systems, and automations for the bold.</span>
+                    <p className="tagline-text">
+                        Building brands, systems, and automations for the bold. 
+                        Silas Abiodun specializes in AI-driven business automation, 
+                        brand acceleration systems, and rapid digital product launches.
+                    </p>
                 </motion.div>
                 <HybridMotionButton 
                     className="cta-btn"
                     variants={heroTextVariants}
                     onClick={() => scrollToSection('cta')}
+                    aria-label="Connect with Silas Abiodun for web development and automation services"
                 >
                     Let's Connect
                 </HybridMotionButton>
             </HybridMotionDiv>
             <motion.div className="hero-right prominent-img" variants={heroImageVariants}>
-                <img src={silasImg} alt="Silas Abiodun" className="hero-img flipped-img" />
+                <img 
+                    src={silasImg} 
+                    alt="Silas Abiodun - Professional Techpreneur, Web Developer, and Project Manager based in Ontario, Canada. Founder of BrandGoto specializing in AI automation and brand acceleration." 
+                    className="hero-img flipped-img"
+                    loading="eager"
+                    width="420"
+                    height="535"
+                />
             </motion.div>
-        </motion.div>
+        </motion.section>
     );
 };
 

@@ -1,3 +1,53 @@
-# https://www.robotstxt.org/robotstxt.html
+# Robots.txt for Silas Abiodun Portfolio
+# https://silasabiodun.com/robots.txt
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap location
+Sitemap: https://silasabiodun.com/sitemap.xml
+
+# Disallow access to build files and development resources
+Disallow: /static/
+Disallow: /*.map$
+Disallow: /build/
+Disallow: /node_modules/
+
+# Allow important assets
+Allow: /static/css/
+Allow: /static/js/
+Allow: /static/media/
+Allow: /favicon.ico
+Allow: /manifest.json
+Allow: /Logo.png
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1
+
+# Specific instructions for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
