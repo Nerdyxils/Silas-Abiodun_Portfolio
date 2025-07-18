@@ -892,3 +892,353 @@
 }
 /* Remove vertical divider */
 .about-divider-vertical { display: none !important; }
+
+/* Mobile Optimizations - Add to end of file */
+
+/* ===== COMPREHENSIVE MOBILE OPTIMIZATIONS ===== */
+
+/* Hero Section Mobile Optimization */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 0 20px 0;
+        text-align: center;
+        min-height: 60vh;
+    }
+    
+    .hero-left {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .hero-right {
+        display: none !important; /* Hide hero image on mobile */
+    }
+    
+    .txt-1 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .txt-2 {
+        font-size: 2.5rem !important;
+        text-align: center;
+        line-height: 1.2;
+    }
+    
+    .cta-btn {
+        margin: 20px auto 0 auto;
+        display: block;
+        width: fit-content;
+    }
+}
+
+/* About Section Mobile Optimization */
+@media (max-width: 768px) {
+    .about-section {
+        text-align: center;
+        padding: 40px 16px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .about-left, .about-right {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .section-title {
+        text-align: center !important;
+        font-size: 2rem;
+    }
+    
+    .about-subtitle {
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .about-description {
+        text-align: center;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .about-value-list {
+        text-align: left;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .about-value-list li {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+}
+
+/* Services Section Mobile Optimization */
+@media (max-width: 768px) {
+    .services-section {
+        text-align: center;
+        padding: 40px 16px;
+    }
+    
+    .services-section .section-title {
+        text-align: center !important;
+        font-size: 2rem;
+        margin-bottom: 16px;
+    }
+    
+    .section-subtext {
+        text-align: center !important;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 32px;
+    }
+    
+    .service-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .service-item {
+        text-align: center;
+        padding: 24px 16px;
+    }
+    
+    .service-title {
+        text-align: center !important;
+        font-size: 1.1rem;
+    }
+    
+    .service-text {
+        text-align: center !important;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .service-icon-wrap {
+        margin: 0 auto 16px auto;
+    }
+}
+
+/* CTA Section Mobile Optimization */
+@media (max-width: 768px) {
+    .cta-section {
+        text-align: center !important;
+        padding: 40px 16px;
+    }
+    
+    .cta-container {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+    
+    .cta-left, .cta-right {
+        text-align: center !important;
+        width: 100%;
+    }
+    
+    .cta-title {
+        text-align: center !important;
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .cta-subtitle {
+        text-align: center !important;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+    
+    .cta-btn-main, .cta-btn-alt {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+/* Contact Section Mobile Optimization */
+@media (max-width: 768px) {
+    .contact-section {
+        text-align: center;
+        padding: 40px 16px;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .contact-left, .contact-right {
+        text-align: center !important;
+        width: 100%;
+    }
+    
+    .contact-title {
+        text-align: center !important;
+        font-size: 2rem;
+    }
+    
+    .contact-subtitle {
+        text-align: center !important;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .contact_form_container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .contact_form input,
+    .contact_form textarea {
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    
+    .contact_form button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Footer Mobile Optimization */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+        padding: 32px 16px;
+    }
+    
+    .icons {
+        justify-content: center;
+        gap: 24px;
+    }
+    
+    .icon {
+        font-size: 2rem;
+    }
+}
+
+/* General Mobile Typography */
+@media (max-width: 768px) {
+    .page_container {
+        padding: 40px 16px;
+    }
+    
+    .section-spacing {
+        padding: 40px 16px;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        text-align: center !important;
+    }
+    
+    p {
+        text-align: center !important;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .section-divider {
+        width: 80%;
+        margin: 24px auto;
+    }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 480px) {
+    .hero-container {
+        padding: 20px 0;
+    }
+    
+    .txt-2 {
+        font-size: 2rem !important;
+    }
+    
+    .section-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .service-list {
+        max-width: 100%;
+    }
+    
+    .service-item {
+        padding: 20px 12px;
+    }
+    
+    .about-col {
+        padding: 16px 12px;
+    }
+    
+    .cta-btn-main, .cta-btn-alt {
+        max-width: 100%;
+    }
+}
+
+/* Add TypeAnimation and Hero Text Mobile Styles */
+@media (max-width: 768px) {
+    .alt-txt {
+        text-align: center !important;
+        font-size: 1.2rem !important;
+        line-height: 1.4;
+        display: block;
+        margin: 16px auto;
+        color: #ef2d56;
+        font-weight: 600;
+    }
+    
+    .hero-tagline {
+        text-align: center !important;
+        margin: 20px auto;
+        max-width: 300px;
+    }
+    
+    .tagline-text {
+        text-align: center !important;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.8);
+        display: block;
+    }
+    
+    .hero-left > * {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .alt-txt {
+        font-size: 1.1rem !important;
+        margin: 12px auto;
+    }
+    
+    .hero-tagline {
+        max-width: 280px;
+        margin: 16px auto;
+    }
+    
+    .tagline-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== END MOBILE OPTIMIZATIONS ===== */
