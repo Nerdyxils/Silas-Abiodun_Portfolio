@@ -905,6 +905,8 @@
         padding: 40px 0 20px 0;
         text-align: center;
         min-height: 60vh;
+        max-width: 85%;
+        margin: 0 auto;
     }
     
     .hero-left {
@@ -940,11 +942,14 @@
     .about-section {
         text-align: center;
         padding: 40px 16px;
+        max-width: 85%;
+        margin: 0 auto;
     }
     
     .about-content {
         flex-direction: column;
         gap: 24px;
+        max-width: 100%;
     }
     
     .about-left, .about-right {
@@ -985,6 +990,8 @@
     .services-section {
         text-align: center;
         padding: 40px 16px;
+        max-width: 85%;
+        margin: 0 auto;
     }
     
     .services-section .section-title {
@@ -1003,7 +1010,7 @@
     .service-list {
         grid-template-columns: 1fr;
         gap: 20px;
-        max-width: 400px;
+        max-width: 100%;
         margin: 0 auto;
     }
     
@@ -1033,6 +1040,8 @@
     .cta-section {
         text-align: center !important;
         padding: 40px 16px;
+        max-width: 85%;
+        margin: 0 auto;
     }
     
     .cta-container {
@@ -1078,6 +1087,8 @@
     .contact-section {
         text-align: center;
         padding: 40px 16px;
+        max-width: 85%;
+        margin: 0 auto;
     }
     
     .contact-container {
@@ -1125,6 +1136,8 @@
     .footer {
         text-align: center;
         padding: 32px 16px;
+        max-width: 85%;
+        margin: 0 auto;
     }
     
     .icons {
@@ -1141,10 +1154,24 @@
 @media (max-width: 768px) {
     .page_container {
         padding: 40px 16px;
+        max-width: 85%;
+        margin: 0 auto;
     }
     
     .section-spacing {
         padding: 40px 16px;
+        max-width: 85%;
+        margin: 0 auto;
+    }
+    
+    /* Ensure all main sections have max-width */
+    .hero-container,
+    .about-section,
+    .services-section,
+    .projects-section,
+    .contact-section {
+        max-width: 85%;
+        margin: 0 auto;
     }
     
     h1, h2, h3, h4, h5, h6 {
@@ -1167,6 +1194,8 @@
 @media (max-width: 480px) {
     .hero-container {
         padding: 20px 0;
+        max-width: 85%;
+        margin: 0 auto;
     }
     
     .txt-2 {
@@ -1191,6 +1220,18 @@
     
     .cta-btn-main, .cta-btn-alt {
         max-width: 100%;
+    }
+    
+    /* Ensure all sections maintain 85% max-width on very small screens */
+    .about-section,
+    .services-section,
+    .cta-section,
+    .contact-section,
+    .footer {
+        max-width: 85%;
+        margin: 0 auto;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
 
@@ -1238,6 +1279,55 @@
     
     .tagline-text {
         font-size: 0.9rem;
+    }
+}
+
+/* Enhanced CTA Button Styles */
+.cta-btn {
+    background: linear-gradient(135deg, #ef2d56 0%, #ff6b6b 100%);
+    color: #fff;
+    border: none;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(239, 45, 86, 0.3);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    transform-origin: center;
+    will-change: transform;
+}
+
+.cta-btn:hover {
+    background: linear-gradient(135deg, #d12447 0%, #ff5252 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(239, 45, 86, 0.4);
+}
+
+.cta-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(239, 45, 86, 0.3);
+}
+
+/* Mobile CTA Button */
+@media (max-width: 768px) {
+    .cta-btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        min-width: 120px;
     }
 }
 

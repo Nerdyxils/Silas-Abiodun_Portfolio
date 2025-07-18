@@ -63,7 +63,7 @@ button:hover, button:focus {
 @media (max-width: 768px) {
     .contact_form_container {
         width: 100%;
-        max-width: 400px;
+        max-width: 85%;
         margin: 0 auto;
         padding: 20px 16px;
     }
@@ -73,6 +73,7 @@ button:hover, button:focus {
         display: flex;
         flex-direction: column;
         gap: 16px;
+        max-width: 100%;
     }
     
     .contact_form input,
@@ -131,7 +132,8 @@ button:hover, button:focus {
 @media (max-width: 480px) {
     .contact_form_container {
         padding: 16px 12px;
-        max-width: 100%;
+        max-width: 85%;
+        margin: 0 auto;
     }
     
     .contact_form input,

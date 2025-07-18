@@ -11,6 +11,16 @@ import {
 } from '../../utils/hybridAnimations';
 
 const HeroSection = () => {
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start' 
+            });
+        }
+    };
+
     return (
         <motion.div 
             className="hero-container" 
@@ -42,6 +52,7 @@ const HeroSection = () => {
                 <HybridMotionButton 
                     className="cta-btn"
                     variants={heroTextVariants}
+                    onClick={() => scrollToSection('cta')}
                 >
                     Let's Connect
                 </HybridMotionButton>

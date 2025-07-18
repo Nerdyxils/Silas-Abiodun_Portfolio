@@ -8,7 +8,7 @@ const SECTIONS = [
     { id: 'hero', label: 'Home' },
     { id: 'about', label: 'About Silas' },
     { id: 'services', label: 'How I Create Value' },
-    { id: 'projects', label: 'Work With Me' },
+    { id: 'cta', label: 'Work With Me' },
     { id: 'contact', label: 'Contact' },
 ];
 

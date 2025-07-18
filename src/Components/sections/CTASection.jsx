@@ -14,7 +14,7 @@ import {
 const CTASection = () => {
     return (
         <HybridMotionSection 
-            id="projects" 
+            id="cta" 
             className="projects-section section-spacing"
             variants={fadeInUp}
         >
