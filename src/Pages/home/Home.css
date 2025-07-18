@@ -897,15 +897,45 @@
 
 /* ===== COMPREHENSIVE MOBILE OPTIMIZATIONS ===== */
 
+/* General Mobile Typography */
+@media (max-width: 768px) {
+    .page_container {
+        padding: 40px 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .section-spacing {
+        padding: 40px 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        text-align: center !important;
+    }
+    
+    p {
+        text-align: center !important;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .section-divider {
+        width: 80%;
+        margin: 24px auto;
+    }
+}
+
 /* Hero Section Mobile Optimization */
 @media (max-width: 768px) {
     .hero-container {
         flex-direction: column;
         gap: 20px;
-        padding: 40px 0 20px 0;
+        padding: 40px 20px 20px 20px;
         text-align: center;
         min-height: 60vh;
-        max-width: 85%;
+        width: 100%;
         margin: 0 auto;
     }
     
@@ -913,6 +943,7 @@
         align-items: center;
         text-align: center;
         width: 100%;
+        padding: 0 10px;
     }
     
     .hero-right {
@@ -941,15 +972,15 @@
 @media (max-width: 768px) {
     .about-section {
         text-align: center;
-        padding: 40px 16px;
-        max-width: 85%;
+        padding: 40px 20px;
+        width: 100%;
         margin: 0 auto;
     }
     
     .about-content {
         flex-direction: column;
         gap: 24px;
-        max-width: 100%;
+        width: 100%;
     }
     
     .about-left, .about-right {
@@ -971,11 +1002,12 @@
         text-align: center;
         font-size: 0.95rem;
         line-height: 1.6;
+        padding: 0 10px;
     }
     
     .about-value-list {
         text-align: left;
-        max-width: 320px;
+        max-width: 350px;
         margin: 0 auto;
     }
     
@@ -989,8 +1021,8 @@
 @media (max-width: 768px) {
     .services-section {
         text-align: center;
-        padding: 40px 16px;
-        max-width: 85%;
+        padding: 40px 20px;
+        width: 100%;
         margin: 0 auto;
     }
     
@@ -1005,18 +1037,22 @@
         font-size: 0.95rem;
         line-height: 1.6;
         margin-bottom: 32px;
+        padding: 0 10px;
     }
     
     .service-list {
         grid-template-columns: 1fr;
         gap: 20px;
-        max-width: 100%;
+        width: 100%;
         margin: 0 auto;
+        padding: 0 10px;
     }
     
     .service-item {
         text-align: center;
-        padding: 24px 16px;
+        padding: 24px 20px;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .service-title {
@@ -1039,8 +1075,8 @@
 @media (max-width: 768px) {
     .cta-section {
         text-align: center !important;
-        padding: 40px 16px;
-        max-width: 85%;
+        padding: 40px 20px;
+        width: 100%;
         margin: 0 auto;
     }
     
@@ -1048,6 +1084,7 @@
         flex-direction: column;
         gap: 24px;
         text-align: center;
+        width: 100%;
     }
     
     .cta-left, .cta-right {
@@ -1059,12 +1096,14 @@
         text-align: center !important;
         font-size: 2rem;
         line-height: 1.2;
+        padding: 0 10px;
     }
     
     .cta-subtitle {
         text-align: center !important;
         font-size: 0.95rem;
         line-height: 1.6;
+        padding: 0 10px;
     }
     
     .cta-buttons {
@@ -1072,11 +1111,12 @@
         flex-direction: column;
         gap: 16px;
         align-items: center;
+        width: 100%;
     }
     
     .cta-btn-main, .cta-btn-alt {
-        width: 100%;
-        max-width: 280px;
+        width: 90%;
+        max-width: 300px;
         text-align: center;
         margin: 0 auto;
     }
@@ -1086,14 +1126,15 @@
 @media (max-width: 768px) {
     .contact-section {
         text-align: center;
-        padding: 40px 16px;
-        max-width: 85%;
+        padding: 40px 20px;
+        width: 100%;
         margin: 0 auto;
     }
     
     .contact-container {
         flex-direction: column;
         gap: 24px;
+        width: 100%;
     }
     
     .contact-left, .contact-right {
@@ -1104,17 +1145,19 @@
     .contact-title {
         text-align: center !important;
         font-size: 2rem;
+        padding: 0 10px;
     }
     
     .contact-subtitle {
         text-align: center !important;
         font-size: 0.95rem;
         line-height: 1.6;
+        padding: 0 10px;
     }
     
     .contact_form_container {
         width: 100%;
-        max-width: 400px;
+        max-width: 450px;
         margin: 0 auto;
     }
     
@@ -1135,8 +1178,8 @@
 @media (max-width: 768px) {
     .footer {
         text-align: center;
-        padding: 32px 16px;
-        max-width: 85%;
+        padding: 32px 20px;
+        width: 100%;
         margin: 0 auto;
     }
     
@@ -1150,51 +1193,11 @@
     }
 }
 
-/* General Mobile Typography */
-@media (max-width: 768px) {
-    .page_container {
-        padding: 40px 16px;
-        max-width: 85%;
-        margin: 0 auto;
-    }
-    
-    .section-spacing {
-        padding: 40px 16px;
-        max-width: 85%;
-        margin: 0 auto;
-    }
-    
-    /* Ensure all main sections have max-width */
-    .hero-container,
-    .about-section,
-    .services-section,
-    .projects-section,
-    .contact-section {
-        max-width: 85%;
-        margin: 0 auto;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        text-align: center !important;
-    }
-    
-    p {
-        text-align: center !important;
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-    
-    .section-divider {
-        width: 80%;
-        margin: 24px auto;
-    }
-}
-
 /* Extra Small Mobile Devices */
 @media (max-width: 480px) {
     .hero-container {
-        padding: 20px 0;
-        max-width: 85%;
+        padding: 20px 16px;
+        width: 100%;
         margin: 0 auto;
     }
     
@@ -1207,11 +1210,12 @@
     }
     
     .service-list {
-        max-width: 100%;
+        width: 100%;
+        padding: 0 5px;
     }
     
     .service-item {
-        padding: 20px 12px;
+        padding: 20px 16px;
     }
     
     .about-col {
@@ -1219,19 +1223,24 @@
     }
     
     .cta-btn-main, .cta-btn-alt {
-        max-width: 100%;
+        width: 95%;
+        max-width: none;
     }
     
-    /* Ensure all sections maintain 85% max-width on very small screens */
+    /* Better spacing for very small screens */
     .about-section,
     .services-section,
     .cta-section,
     .contact-section,
     .footer {
-        max-width: 85%;
-        margin: 0 auto;
-        padding-left: 12px;
-        padding-right: 12px;
+        padding: 32px 16px;
+    }
+    
+    .about-description,
+    .section-subtext,
+    .cta-subtitle,
+    .contact-subtitle {
+        padding: 0 5px;
     }
 }
 
@@ -1239,46 +1248,170 @@
 @media (max-width: 768px) {
     .alt-txt {
         text-align: center !important;
-        font-size: 1.2rem !important;
+        font-size: 1.3rem !important;
         line-height: 1.4;
         display: block;
-        margin: 16px auto;
+        margin: 20px auto;
         color: #ef2d56;
         font-weight: 600;
+        min-height: 40px;
     }
     
     .hero-tagline {
         text-align: center !important;
-        margin: 20px auto;
-        max-width: 300px;
+        margin: 24px auto;
+        max-width: 320px;
     }
     
     .tagline-text {
         text-align: center !important;
-        font-size: 0.95rem;
-        line-height: 1.5;
-        color: rgba(255, 255, 255, 0.8);
+        font-size: 1rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
         display: block;
+        font-weight: 400;
     }
     
     .hero-left > * {
         text-align: center !important;
     }
+    
+    /* Enhanced mobile spacing */
+    .hero-container {
+        padding: 60px 20px 40px 20px;
+    }
+    
+    /* Better mobile buttons */
+    .cta-btn {
+        margin: 32px auto 0 auto;
+        padding: 16px 32px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        box-shadow: 0 6px 20px rgba(239, 45, 86, 0.3);
+    }
+    
+    .cta-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(239, 45, 86, 0.4);
+    }
 }
 
 @media (max-width: 480px) {
     .alt-txt {
-        font-size: 1.1rem !important;
-        margin: 12px auto;
+        font-size: 1.2rem !important;
+        margin: 16px auto;
+        min-height: 36px;
     }
     
     .hero-tagline {
-        max-width: 280px;
-        margin: 16px auto;
+        max-width: 300px;
+        margin: 20px auto;
     }
     
     .tagline-text {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+    }
+    
+    .hero-container {
+        padding: 40px 16px 30px 16px;
+    }
+    
+    .cta-btn {
+        margin: 28px auto 0 auto;
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+}
+
+/* Enhanced Mobile Animations and Interactions */
+@media (max-width: 768px) {
+    /* Smooth scrolling for mobile */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Better touch targets */
+    .service-item {
+        min-height: 200px;
+        transition: all 0.3s ease;
+    }
+    
+    .service-item:active {
+        transform: scale(0.98);
+    }
+    
+    /* Enhanced about cards */
+    .about-col {
+        transition: all 0.3s ease;
+        border-radius: 16px;
+        padding: 24px 20px;
+    }
+    
+    .about-col:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(239, 45, 86, 0.15);
+    }
+    
+    /* Better mobile typography */
+    .section-title {
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+    }
+    
+    .section-subtext {
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        max-width: 500px;
+        margin: 0 auto 32px auto;
+    }
+    
+    /* Enhanced dividers */
+    .section-divider {
+        height: 3px;
+        background: linear-gradient(90deg, transparent 0%, rgba(239,45,86,0.6) 50%, transparent 100%);
+        border: none;
+        border-radius: 2px;
+        margin: 32px auto;
+    }
+    
+    /* Better mobile footer */
+    .footer {
+        background: rgba(20, 20, 20, 0.8);
+        border-top: 1px solid rgba(239, 45, 86, 0.1);
+        backdrop-filter: blur(10px);
+    }
+    
+    .icon {
+        transition: all 0.3s ease;
+    }
+    
+    .icon:hover {
+        transform: scale(1.1);
+        color: #ef2d56;
+    }
+}
+
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+    /* Reduce motion for better performance */
+    * {
+        will-change: auto !important;
+    }
+    
+    /* Optimize images */
+    img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+    }
+    
+    /* Better focus states for accessibility */
+    button:focus,
+    input:focus,
+    textarea:focus,
+    a:focus {
+        outline: 2px solid #ef2d56;
+        outline-offset: 2px;
     }
 }
 
@@ -1312,23 +1445,6 @@
 .cta-btn:active {
     transform: translateY(0);
     box-shadow: 0 4px 15px rgba(239, 45, 86, 0.3);
-}
-
-/* Mobile CTA Button */
-@media (max-width: 768px) {
-    .cta-btn {
-        padding: 14px 28px;
-        font-size: 1rem;
-        min-width: 140px;
-    }
-}
-
-@media (max-width: 480px) {
-    .cta-btn {
-        padding: 12px 24px;
-        font-size: 0.95rem;
-        min-width: 120px;
-    }
 }
 
 /* ===== END MOBILE OPTIMIZATIONS ===== */
