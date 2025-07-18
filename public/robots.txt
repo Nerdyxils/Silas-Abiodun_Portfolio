@@ -1,11 +1,11 @@
 # Robots.txt for Silas Abiodun Portfolio
-# https://silasabiodun.com/robots.txt
+# https://www.silasabiodun.com/robots.txt
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://silasabiodun.com/sitemap.xml
+Sitemap: https://www.silasabiodun.com/sitemap.xml
 
 # Disallow access to build files and development resources
 Disallow: /static/
@@ -51,3 +51,7 @@ Allow: /
 
 User-agent: LinkedInBot
 Allow: /
+
+# Additional instructions for domain consolidation
+# This helps search engines understand the preferred domain
+# Canonical domain: https://www.silasabiodun.com

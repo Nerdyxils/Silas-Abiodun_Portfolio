@@ -38,13 +38,13 @@ function App() {
       <Preloader />
       {/* <AnimationTest /> */}
       <div className="body">
-        <Menu />
+          <Menu />
         <HeroSection />
         <AboutSection />
         <ServicesSection />
         <CTASection />
         <ContactSection />
-        <FooterMenu />
+          <FooterMenu />
       </div>
     </div>
   );

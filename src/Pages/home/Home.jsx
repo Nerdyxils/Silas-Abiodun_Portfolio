@@ -15,7 +15,7 @@ const Home = () => {
             <CTASection />
             <ContactSection />
         </div>
-    );
+);
 };
 
 export default Home;

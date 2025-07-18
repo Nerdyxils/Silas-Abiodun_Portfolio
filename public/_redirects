@@ -1,0 +1,11 @@
+# Vercel Redirects for Domain Consolidation
+# Redirect old Vercel domain to main domain
+
+# Redirect from Vercel domain to main domain
+https://silas-abiodun.vercel.app/* https://www.silasabiodun.com/:splat 301!
+
+# Redirect non-www to www (if needed)
+https://silasabiodun.com/* https://www.silasabiodun.com/:splat 301!
+
+# Handle React Router (SPA)
+/* /index.html 200 

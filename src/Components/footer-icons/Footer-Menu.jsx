@@ -9,13 +9,13 @@ export default function FooterMenu() {
             <div className="icons">
                 <div className="animate-scale-in animate-delay-1">
                     <ExternalLink href="https://github.com/Nerdyxils/" target="_blank" rel="noopener noreferrer">
-                        <FaGithubSquare className="icon" />
-                    </ExternalLink>
+                    <FaGithubSquare className="icon" />
+                </ExternalLink>
                 </div>
                 <div className="animate-scale-in animate-delay-2">
                     <ExternalLink href="https://www.linkedin.com/in/abiodun-silas-timi/" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin className="icon" />
-                    </ExternalLink>
+                    <FaLinkedin className="icon" />
+                </ExternalLink>
                 </div>
                 <div className="animate-scale-in animate-delay-3">
                     <ExternalLink href="https://x.com/Ayomide_muyi" target="_blank" rel="noopener noreferrer">
@@ -25,7 +25,7 @@ export default function FooterMenu() {
                 <div className="animate-scale-in animate-delay-4">
                     <ExternalLink href="https://www.instagram.com/xilssilas/" target="_blank" rel="noopener noreferrer">
                         <FaInstagram className="icon" />
-                    </ExternalLink>
+                </ExternalLink>
                 </div>
             </div>
         </div>
