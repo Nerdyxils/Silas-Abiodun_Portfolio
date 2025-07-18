@@ -1,3 +1,8 @@
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   margin: 0;
@@ -11,5 +16,22 @@ body {
   height: 100%;
   width: 100%;
   max-width: 100%;
-  padding: 30px 0 0 0;
+  padding: 0;
+}
+
+/* Enhance animations and transitions */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

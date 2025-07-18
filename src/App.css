@@ -32,7 +32,7 @@ Global Styles
 body {
   background: var(--hero-bg-1);
   color: var(--clr-white);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .main {
@@ -44,7 +44,7 @@ body {
 .body {
   position: relative;
   perspective: 1200px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 h1 {
@@ -70,7 +70,7 @@ a {
 .page_container {
   overflow: hidden;
   transform-style: preserve-3d;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .project_card, .service-item {

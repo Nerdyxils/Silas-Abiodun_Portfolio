@@ -1,91 +1,126 @@
-import React from 'react';
-import * as emailjs from "emailjs-com";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import './contact.style.css';
 import Swal from 'sweetalert2';
-import { motion } from 'framer-motion';
-
-const SERVICE_ID = "service_7ing9hi";
-const TEMPLATE_ID = "template_cq899ev";
-const USER_ID = "user_MgUIWcsi1jH4DWOrLSNHx";
+import { 
+    fadeInUp, 
+    HybridMotionDiv
+} from '../../utils/hybridAnimations';
 
 const ContactComponent = () => {
-    const handleOnSubmit = (e) => {
-        e.preventDefault();
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-            .then((result) => {
-                console.log(result.text);
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Message Sent Successfully',
-                    color: '#fff',
-                    background: '#101010',
-                    customClass: {
-                        popup: 'animated tada'
-                    }
-                });
-            }, (error) => {
-                console.log(error.text);
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops, something went wrong',
-                    text: error.text,
-                    color: '#fff',
-                    background: '#101010'
-                });
-            });
-        e.target.reset();
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
     };
 
-    const inputVariants = {
-        focus: { 
-            scale: 1.02, 
-            borderBottomColor: "#ef2d56",
-            transition: { duration: 0.3 }
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch('https://formspree.io/f/xyzpzlgo', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                    _subject: `New Portfolio Contact from ${formData.name}`,
+                }),
+            });
+
+            if (response.ok) {
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Your message has been sent successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'Great!'
+                });
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            Swal.fire({
+                title: 'Error!',
+                text: 'Failed to send message. Please try again.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
     return (
-        <div>
-            <form className="ui form" onSubmit={handleOnSubmit}>
+        <HybridMotionDiv 
+            className="contact_form_container"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+        >
+            <form onSubmit={handleSubmit} className="contact_form">
                 <motion.input
-                    id="name"
-                    name="user_name"
+                    type="text"
+                    name="name"
                     placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
-                    whileFocus="focus"
-                    variants={inputVariants}
+                    variants={fadeInUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
                 />
                 <motion.input
-                    id="email"
-                    name="user_email"
-                    placeholder="Your Email Address"
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    value={formData.email}
+                    onChange={handleChange}
                     required
-                    whileFocus="focus"
-                    variants={inputVariants}
+                    variants={fadeInUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
                 />
                 <motion.textarea
-                    id="feedback"
-                    name="user_message"
-                    placeholder="What would you like to chat about?"
+                    name="message"
+                    placeholder="Your Message"
+                    value={formData.message}
+                    onChange={handleChange}
                     required
-                    whileFocus="focus"
-                    variants={inputVariants}
+                    variants={fadeInUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
                 />
                 <motion.button
                     type="submit"
-                    whileHover={{ 
-                        scale: 1.05,
-                        backgroundColor: "#ef2d56",
-                        color: "#fff",
-                        boxShadow: "0px 5px 15px rgba(239, 45, 86, 0.4)"
-                    }}
+                    disabled={isSubmitting}
+                    variants={fadeInUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
                 >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                 </motion.button>
             </form>
-        </div>
+        </HybridMotionDiv>
     );
 };
 
