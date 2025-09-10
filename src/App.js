@@ -13,6 +13,7 @@ import FAQSection from './Components/sections/FAQSection';
 import UnfilteredCTASection from './Components/sections/UnfilteredCTASection';
 import ContactSection from './Components/sections/ContactSection';
 import FooterSection from './Components/sections/FooterSection';
+import ScrollToTop from './Components/ScrollToTop';
 // import AnimationTest from './Components/AnimationTest';
 
 function Preloader() {
@@ -51,6 +52,7 @@ function App() {
         <UnfilteredCTASection />
         <ContactSection />
         <FooterSection />
+        <ScrollToTop />
       </div>
     </div>
   );
