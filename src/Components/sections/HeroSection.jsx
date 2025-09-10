@@ -1,29 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TypeAnimation } from 'react-type-animation';
-import silasImg from '../../assets/silas_new.jpg';
+import { FaBullseye, FaRocket, FaLightbulb } from 'react-icons/fa';
+import bgImage from '../../assets/Bg_image.png';
 import { 
     heroVariants, 
     heroTextVariants, 
-    heroImageVariants,
     HybridMotionDiv,
     HybridMotionButton
 } from '../../utils/hybridAnimations';
 
 const HeroSection = () => {
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start' 
-            });
-        }
+    const handleBookSession = () => {
+        window.open('https://calendly.com/silas-brandgoto/30min', '_blank');
     };
 
     return (
         <motion.section 
-            className="hero-container" 
+            className="hero-section" 
             id="hero"
             initial="hidden"
             animate="visible"
@@ -31,52 +24,46 @@ const HeroSection = () => {
             role="banner"
             aria-label="Silas Abiodun - Techpreneur and Web Developer Introduction"
         >
-            <HybridMotionDiv className="hero-left" variants={heroTextVariants}>
-                <motion.p className="txt-1" variants={heroTextVariants}>Hey, I'm</motion.p>
-                <motion.h1 className="txt-2" variants={heroTextVariants}>Silas Abiodun</motion.h1>
-                <motion.div variants={heroTextVariants}>
-                    <TypeAnimation
-                        sequence={[
-                            'Techpreneur @ BrandGoto', 1800,
-                            'Startup Launcher for Founders', 1800,
-                            'Automation Strategist', 1800,
-                            'Web Developer & Project Manager', 1800,
-                            'AI-Driven Business Automation Expert', 1800,
-                        ]}
-                        wrapper="h2"
-                        speed={80}
-                        deletionSpeed={60}
-                        repeat={Infinity}
-                        className="alt-txt"
-                        aria-label="Silas Abiodun's professional roles and expertise"
-                    />
+            <div className="hero-background">
+                <img src={bgImage} alt="Background" className="hero-bg-image" />
+                <div className="hero-overlay"></div>
+            </div>
+            
+            <div className="hero-content">
+                <HybridMotionDiv className="hero-text" variants={heroTextVariants}>
+                    <motion.h1 className="hero-title" variants={heroTextVariants}>
+                        Techpreneur & <span className="highlight">AI Automation Expert</span>
+                    </motion.h1>
+                    <motion.p className="hero-description" variants={heroTextVariants}>
+                        I'm Silas Abiodun, a Techpreneur at BrandGoto specializing in AI automation, 
+                        full-stack development, and project management. Let's build innovative solutions that drive real business results.
+                    </motion.p>
+                    
+                    <motion.div className="hero-features" variants={heroTextVariants}>
+                        <div className="feature-tag">
+                            <FaBullseye className="feature-icon" />
+                            <span>Techpreneurship</span>
+                        </div>
+                        <div className="feature-tag">
+                            <FaRocket className="feature-icon" />
+                            <span>AI Automation</span>
+                        </div>
+                        <div className="feature-tag">
+                            <FaLightbulb className="feature-icon" />
+                            <span>Full Stack Development</span>
+                        </div>
                 </motion.div>
-                <motion.div className="hero-tagline" variants={heroTextVariants}>
-                    <p className="tagline-text">
-                        Building brands, systems, and automations for the bold. 
-                        Silas Abiodun specializes in AI-driven business automation, 
-                        brand acceleration systems, and rapid digital product launches.
-                    </p>
-                </motion.div>
+                    
                 <HybridMotionButton 
-                    className="cta-btn"
+                        className="hero-cta-btn"
                     variants={heroTextVariants}
-                    onClick={() => scrollToSection('cta')}
-                    aria-label="Connect with Silas Abiodun for web development and automation services"
+                        onClick={handleBookSession}
+                        aria-label="Book a session with Silas Abiodun"
                 >
-                    Let's Connect
+                        Book a Session
                 </HybridMotionButton>
             </HybridMotionDiv>
-            <motion.div className="hero-right prominent-img" variants={heroImageVariants}>
-                <img 
-                    src={silasImg} 
-                    alt="Silas Abiodun - Professional Techpreneur, Web Developer, and Project Manager based in Ontario, Canada. Founder of BrandGoto specializing in AI automation and brand acceleration." 
-                    className="hero-img flipped-img"
-                    loading="eager"
-                    width="420"
-                    height="535"
-                />
-            </motion.div>
+            </div>
         </motion.section>
     );
 };

@@ -1,80 +1,82 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaBullseye, FaRocket, FaLightbulb, FaCheck } from 'react-icons/fa';
+import imageBg from '../../assets/image_bg.jpg';
 import { 
     fadeInUp, 
-    fadeInLeft, 
-    fadeInRight, 
     staggerContainer,
-    dividerVariants,
     HybridMotionSection,
     HybridMotionDiv,
     HybridMotionButton
 } from '../../utils/hybridAnimations';
 
 const CTASection = () => {
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start' 
+            });
+        }
+    };
+
     return (
         <HybridMotionSection 
             id="cta" 
-            className="projects-section section-spacing"
+            className="cta-section section-spacing"
             variants={fadeInUp}
         >
-            <motion.hr 
-                className="section-divider" 
-                variants={dividerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            />
+            <div className="cta-background">
+                <img src={imageBg} alt="Background" className="cta-bg-image" />
+                <div className="cta-overlay"></div>
+            </div>
+            
             <HybridMotionDiv 
-                className="cta-newsletter-wrap"
+                className="cta-content"
                 variants={staggerContainer}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
             >
                 <motion.h2 className="cta-title" variants={fadeInUp}>
-                    Ready to move fast and get real results?
+                    Ready to Build <span className="highlight">Something Amazing?</span>
                 </motion.h2>
-                <motion.p className="cta-text section-subtext" variants={fadeInUp}>
-                    If you want digital solutions that actually work—and a founder who gets it—let's make it happen. Or just want my unfiltered takes and the best memes? Either way, you're in the right place.
+                
+                <motion.p className="cta-description" variants={fadeInUp}>
+                    Let's discuss your technical project and explore how we can build innovative solutions that drive real business results.
                 </motion.p>
-                <HybridMotionDiv className="cta-newsletter-actions" variants={fadeInUp}>
-                    <HybridMotionDiv className="cta-actions" variants={staggerContainer}>
-                        <HybridMotionButton 
-                            href="https://www.brandgoto.ca/" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="cta-btn-main"
-                            variants={fadeInLeft}
-                        >
-                            Visit BrandGoto
-                        </HybridMotionButton>
-                        <HybridMotionButton 
-                            href="https://calendly.com/silas-brandgoto/30min" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="cta-btn-alt"
-                            variants={fadeInRight}
-                        >
-                            Book a 30-min Consult
-                        </HybridMotionButton>
-                    </HybridMotionDiv>
-                    <HybridMotionDiv className="newsletter-actions" variants={fadeInUp}>
-                        <h3 className="newsletter-title">Unfiltered by Silas</h3>
-                        <p className="newsletter-text">
-                            Want my unfiltered, raw thoughts on life, tech, and the funniest memes I find online? Subscribe to my newsletter and get the real deal straight to your inbox.
-                        </p>
-                        <HybridMotionButton 
-                            href="https://unfiltered.silasabiodun.com/" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="newsletter-btn"
-                            variants={fadeInUp}
-                        >
-                            Subscribe to Unfiltered
-                        </HybridMotionButton>
-                    </HybridMotionDiv>
-                </HybridMotionDiv>
+                
+                <motion.div className="cta-features" variants={fadeInUp}>
+                    <div className="cta-feature-tag">
+                        <FaBullseye className="feature-icon" />
+                        <span>Technical Consultation</span>
+                    </div>
+                    <div className="cta-feature-tag">
+                        <FaRocket className="feature-icon" />
+                        <span>Project Planning</span>
+                    </div>
+                    <div className="cta-feature-tag">
+                        <FaLightbulb className="feature-icon" />
+                        <span>Innovation Strategy</span>
+                    </div>
+                </motion.div>
+                
+                <HybridMotionButton 
+                    className="cta-main-btn"
+                    variants={fadeInUp}
+                    onClick={() => scrollToSection('contact')}
+                >
+                    Start Your Project
+                </HybridMotionButton>
+                
+                <motion.div className="guarantee-card" variants={fadeInUp}>
+                    <FaCheck className="guarantee-icon" />
+                    <div className="guarantee-content">
+                        <h4 className="guarantee-title">100% Risk-Free</h4>
+                        <p className="guarantee-text">If you're not completely satisfied, we'll work together to make it right.</p>
+                    </div>
+                </motion.div>
             </HybridMotionDiv>
         </HybridMotionSection>
     );

@@ -6,9 +6,11 @@ import './Menu.css'
 
 const SECTIONS = [
     { id: 'hero', label: 'Home' },
-    { id: 'about', label: 'About Silas' },
-    { id: 'services', label: 'How I Create Value' },
-    { id: 'cta', label: 'Work With Me' },
+    { id: 'about', label: 'About' },
+    { id: 'services', label: 'Services' },
+    { id: 'technologies', label: 'Tech' },
+    { id: 'faq', label: 'FAQ' },
+    { id: 'unfiltered-cta', label: 'Connect' },
     { id: 'contact', label: 'Contact' },
 ];
 
@@ -23,7 +25,7 @@ export default function Menu() {
         e.preventDefault();
         const section = document.getElementById(sectionId);
         if (section) {
-            const yOffset = -20; // adjust if you have a fixed header
+            const yOffset = -80; // adjust for fixed header height
             const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
@@ -33,19 +35,24 @@ export default function Menu() {
     // Scrollspy effect
     useEffect(() => {
         const handleScrollSpy = () => {
-            const scrollPosition = window.scrollY + window.innerHeight / 3;
+            const scrollPosition = window.scrollY + 100; // offset for better detection
             let current = 'hero';
+            
             for (const sec of SECTIONS) {
                 const el = document.getElementById(sec.id);
                 if (el) {
-                    const offsetTop = el.offsetTop;
-                    if (scrollPosition >= offsetTop) {
+                    const rect = el.getBoundingClientRect();
+                    const elementTop = rect.top + window.scrollY;
+                    const elementBottom = elementTop + rect.height;
+                    
+                    if (scrollPosition >= elementTop - 100 && scrollPosition < elementBottom) {
                         current = sec.id;
                     }
                 }
             }
             setActiveSection(current);
         };
+        
         window.addEventListener('scroll', handleScrollSpy);
         handleScrollSpy();
         return () => window.removeEventListener('scroll', handleScrollSpy);
@@ -67,6 +74,14 @@ export default function Menu() {
                         {sec.label}
                     </a>
                 ))}
+                <a
+                    className="cta-button"
+                    href="https://calendly.com/silas-brandgoto/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Book a Session
+                </a>
             </div>
             <div className="mobile-menu" onClick={handleClick}>
                 {click ? (

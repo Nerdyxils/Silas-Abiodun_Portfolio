@@ -3,13 +3,16 @@ import './App.css';
 import './Pages/home/Home.css';
 import './utils/customAnimations.css';
 import { initHybridAnimations } from './utils/hybridAnimations';
-import FooterMenu from './Components/footer-icons/Footer-Menu';
 import Menu from './Components/menu-item/Menu';
 import HeroSection from './Components/sections/HeroSection';
+import StatisticsSection from './Components/sections/StatisticsSection';
 import AboutSection from './Components/sections/AboutSection';
 import ServicesSection from './Components/sections/ServicesSection';
-import CTASection from './Components/sections/CTASection';
+import TechnologyCarousel from './Components/sections/TechnologyCarousel';
+import FAQSection from './Components/sections/FAQSection';
+import UnfilteredCTASection from './Components/sections/UnfilteredCTASection';
 import ContactSection from './Components/sections/ContactSection';
+import FooterSection from './Components/sections/FooterSection';
 // import AnimationTest from './Components/AnimationTest';
 
 function Preloader() {
@@ -38,13 +41,16 @@ function App() {
       <Preloader />
       {/* <AnimationTest /> */}
       <div className="body">
-          <Menu />
+        <Menu />
         <HeroSection />
+        <StatisticsSection />
         <AboutSection />
         <ServicesSection />
-        <CTASection />
+        <TechnologyCarousel />
+        <FAQSection />
+        <UnfilteredCTASection />
         <ContactSection />
-          <FooterMenu />
+        <FooterSection />
       </div>
     </div>
   );
