@@ -76,7 +76,7 @@ export default function Menu() {
                 ))}
                 <a
                     className="cta-button"
-                    href="https://calendly.com/silas-brandgoto/30min"
+                    href="https://calendly.com/silasabiodun25/30min"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

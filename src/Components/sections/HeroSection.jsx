@@ -11,7 +11,7 @@ import {
 
 const HeroSection = () => {
     const handleBookSession = () => {
-        window.open('https://calendly.com/silas-brandgoto/30min', '_blank');
+        window.open('https://calendly.com/silasabiodun25/30min', '_blank');
     };
 
     return (

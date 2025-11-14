@@ -62,7 +62,7 @@ From concept to live product - fast development and deployment of digital soluti
 - **Website**: [silasabiodun.com](https://silasabiodun.com)
 - **BrandGoto**: [brandgoto.ca](https://www.brandgoto.ca)
 - **Newsletter**: [Unfiltered by Silas](https://unfiltered.silasabiodun.com)
-- **Consultation**: [Book a 30-min Consult](https://calendly.com/silas-brandgoto/30min)
+- **Consultation**: [Book a 30-min Consult](https://calendly.com/silasabiodun25/30min)
 
 ## Location
 
