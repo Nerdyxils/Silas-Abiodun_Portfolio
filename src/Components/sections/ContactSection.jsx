@@ -44,7 +44,7 @@ const ContactSection = () => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch('https://formspree.io/f/xyzpzlgo', {
+            const response = await fetch('https://hook.us2.make.com/mawa001mi2q2wc3peaorx54y8tvgeg0p', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
