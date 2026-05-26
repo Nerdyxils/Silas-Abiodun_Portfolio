@@ -1,88 +1,27 @@
 {
-  "homepage": "https://www.silasabiodun.com/",
   "name": "silas-abiodun-portfolio",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "private": true,
-  "description": "Professional portfolio of Silas Abiodun - Techpreneur, Web Developer, and Project Manager. Founder of BrandGoto, specializing in AI-driven business automation and brand acceleration systems.",
-  "keywords": [
-    "Silas Abiodun",
-    "Techpreneur", 
-    "Web Developer",
-    "Project Manager",
-    "BrandGoto",
-    "AI Automation",
-    "Brand Acceleration",
-    "Ontario Canada",
-    "React Portfolio",
-    "Business Automation"
-  ],
-  "author": {
-    "name": "Silas Abiodun",
-    "email": "contact@silasabiodun.com",
-    "url": "https://www.silasabiodun.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/silasabiodun/silas-abiodun-portfolio"
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "bootstrap": "^5.1.1",
-    "formik": "^2.2.9",
-    "framer-motion": "^6.5.1",
-    "react": "^17.0.2",
-    "react-animated-text-builders": "^1.1.1",
-    "react-bootstrap": "^2.0.0-rc.1",
-    "react-dom": "^17.0.2",
-    "react-external-link": "^1.2.2",
-    "react-icons": "^4.3.1",
-    "react-intersection-observer": "^9.16.0",
-    "react-router-dom": "^5.3.0",
-    "react-scripts": "5.0.1",
-    "react-tabs": "^3.2.2",
-    "react-transition-group": "^4.4.5",
-    "react-type-animation": "3.2.0",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.4",
-    "sweetalert2": "^11.1.9",
-    "web-vitals": "^1.1.2",
-    "yup": "^0.32.11"
-  },
-  "engines": {
-    "node": "22.x"
-  },
-  "resolutions": {
-    "react-dom": "^17.0.2"
-  },
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "framer-motion": "^11",
+    "gray-matter": "^4.0.3",
+    "next": "14.2.29",
+    "next-mdx-remote": "^5.0.0",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.29",
+    "typescript": "5.9.3"
   }
 }

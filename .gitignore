@@ -8,8 +8,15 @@
 # testing
 /coverage
 
+# next.js
+/.next/
+/out/
+
 # production
 /build
+
+# typescript
+next-env.d.ts
 
 # misc
 .DS_Store
