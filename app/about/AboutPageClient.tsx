@@ -44,7 +44,7 @@ export default function AboutPageClient() {
               `Started as a self-taught developer. Fell in love with the intersection of systems thinking and product design. Spent years building other people's products — got very good at it.`,
               `Kept seeing the same gap. Founders with real ideas hitting a wall between "I have a product" and "I'm investor-ready." The wall is always the same three things: no coherent brand, a website that doesn't convert, and manual workflows eating all their time.`,
               `BrandGoto is my answer. A studio that delivers brand identity, a performance web build, and AI automation as one integrated system — in 14 days, at a fixed price. No retainers, no vague scopes, no "strategy decks."`,
-              `I&apos;m drawn to the moment right before a business is real: when an idea stops being a thought and becomes infrastructure. That&apos;s why I care so much about what separates "cool" from "shipped."`,
+              `I'm drawn to the moment an idea becomes real — when it turns into infrastructure you can ship, measure, and iterate. That's the line I care about: "cool" vs. shipped.`,
             ].map((para, i) => (
               <p key={i} style={{
                 fontFamily: 'var(--font-body)',
