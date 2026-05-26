@@ -2,13 +2,39 @@
 
 import { useState } from 'react'
 
+const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/mawa001mi2q2wc3peaorx54y8tvgeg0p'
+
 export default function WorkPageClient() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (email.trim()) setSubmitted(true)
+    const trimmedEmail = email.trim()
+    if (!trimmedEmail) return
+
+    setSending(true)
+    fetch(MAKE_WEBHOOK_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({ email: trimmedEmail }).toString(),
+    })
+      .then(async res => {
+        if (!res.ok) {
+          const text = await res.text().catch(() => '')
+          throw new Error(`Webhook request failed (${res.status}): ${text}`)
+        }
+        setSubmitted(true)
+      })
+      .catch(err => {
+        // Keep UI simple: log the error for debugging.
+        // If you want, we can add an inline error message next.
+        console.error(err)
+      })
+      .finally(() => setSending(false))
   }
 
   return (
@@ -26,7 +52,7 @@ export default function WorkPageClient() {
             lineHeight: 1.1,
             marginBottom: '24px',
           }}>
-            Case studies coming.
+            Work in the wild.
           </h1>
           <p style={{
             fontFamily: 'var(--font-body)',
@@ -36,8 +62,7 @@ export default function WorkPageClient() {
             lineHeight: 1.65,
             marginBottom: '48px',
           }}>
-            I&apos;m documenting BrandGoto&apos;s first projects.
-            Get notified when they go live.
+            BrandGoto case studies live on the studio site, and my own products — like OddLogic and SwiftCut — are already shipping. If you want to see new work as it lands, drop your email below. Or just reach out directly at silas@brandgoto.com.
           </p>
 
           {submitted ? (
@@ -80,6 +105,7 @@ export default function WorkPageClient() {
               />
               <button
                 type="submit"
+                disabled={sending}
                 style={{
                   background: 'var(--color-accent)',
                   color: 'white',
